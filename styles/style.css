@@ -18,6 +18,7 @@
   display: flex;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
@@ -29,13 +30,11 @@
   top: 0;
   right: 0;
   margin-top: 64px;
-  z-index: 1;
+  z-index: 0;
 }
 
 .logo {
   width: 183px;
-  height: 32px;
-  z-index: 1;
 }
 
 .logo_place_header {
@@ -43,6 +42,8 @@
   position: absolute;
   top: 30px;
   left: 64px;
+  height: 32px;
+  z-index: 2;
 }
 
 .header__title {
@@ -53,7 +54,7 @@
   line-height: 96px;
   font-size: 102px;
   font-weight: bold;
-  z-index: 3;
+  z-index: 2;
 }
 
 .header__subtitle {
@@ -65,7 +66,7 @@
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
-  z-index: 1;
+  z-index: 2;
 }
 
 .header__main-illustration {
@@ -74,7 +75,7 @@
   right: 0;
   width: 765px;
   height: 608px;
-  z-index: 2;
+  z-index: 1;
 }
 
 .description {
@@ -165,6 +166,7 @@
   flex-direction: row;
   justify-content: space-between;
   width: 1100px;
+  list-style-type: none;
 }
 
 .table__cell {
@@ -195,14 +197,14 @@
 .feynman {
   position: relative;
   min-height: 890px;
-  background-image: url('/images/feynman.png');
+  background-image: url('../images/feynman.png');
   background-position: left bottom;
   background-repeat: no-repeat;
 }
 
 .feynman__title {
   margin: 0 auto;
-  padding: 0;
+  padding: 100px 0 0;
   width: 648px;
   text-align: center;
   line-height: 1.15;
@@ -279,10 +281,11 @@
   position: absolute;
   width: 877px;
   height: 877px;
-  background-image: url('/images/kaufman-triangle.svg');
+  background-image: url('../images/kaufman-triangle.svg');
   background-repeat: no-repeat;
   right: -210px;
   top: 0;
+  background-size: cover;
 }
 
 .footer {
@@ -291,18 +294,71 @@
   background-color: #1f1f1f;
   color: white;
   min-height: 350px;
+  box-sizing: border-box;
 }
 
 .logo_place_footer {
-  background-image: url('/images/logo_place_footer.svg');
+  background-image: url('../images/logo_place_footer.svg');
   background-repeat: no-repeat;
+  height: 35px;
 }
 
 .footer__columns {
-  width: 90%;
+  position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
+
+.footer__column_content_copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 711px;
+}
+
+.footer__author {
+  margin: 18px 0;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.footer__column-heading {
+  margin: 0;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer__column-links {
+  padding: 0;
+  color: white;
+  text-decoration: none;
+  margin-top: 20px;
+  margin-bottom: 16px;
+  list-style-type: none;
+}
+
+.footer__social-icons {
+  margin-right: 10px;
+}
+
+.footer__column-link {
+  margin-bottom: 16px;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+  color: white;
+  text-decoration: none;
+}
+
+.footer__column_content_info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
