@@ -3,7 +3,7 @@
   /* мы ещё не умеем делать мобильную версию сайта, */
   /* поэтому выше установлена минимальная ширина страницы */
   max-width: 1600px;
-  /* выше установили ограничение по максимальной ширине 
+  /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -78,6 +78,11 @@
   z-index: 1;
 }
 
+.header__link {
+  color: #2f80ed;
+  text-decoration: none;
+}
+
 .description {
   margin-top: 100px;
 }
@@ -94,6 +99,7 @@
 }
 
 .two-columns__brief {
+  margin: 0;
   width: 175px;
   line-height: 1.2;
   font-size: 18px;
@@ -158,9 +164,9 @@
 }
 
 .table {
+  padding: 0;
+  margin: 0 auto;
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -197,6 +203,7 @@
 .feynman {
   position: relative;
   min-height: 890px;
+  background-color: #f2f2f2;
   background-image: url('../images/feynman.png');
   background-position: left bottom;
   background-repeat: no-repeat;
@@ -228,6 +235,8 @@
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
+  text-decoration: none;
+  color: #2f80ed;
 }
 
 .kaufman {
@@ -243,38 +252,28 @@
 }
 
 .section-title_theme_dark {
+  position: relative;
   color: white;
-  line-height: 1.15;
-  font-size: 60px;
-  font-weight: bold;
+  z-index: 1;
 }
 
 .section-subtitle_theme_dark {
   color: white;
-  line-height: 34px;
-  font-size: 24px;
-  font-weight: normal;
+  z-index: 1;
 }
 
 /* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
   width: 200px;
-  color: white;
-  margin-right: 0;
   margin-top: 80px;
 }
 
 .table__heading_theme_dark {
-  line-height: 1.15;
-  font-size: 24px;
-  font-weight: bold;
+  color: white;
 }
 
 .table__text_theme_dark {
-  margin-top: 20px;
-  line-height: 1.2;
-  font-size: 18px;
-  font-weight: normal;
+  color: white;
 }
 
 .kaufman__triangle {
@@ -289,6 +288,7 @@
 }
 
 .footer {
+  display: flex;
   padding-top: 60px;
   padding-bottom: 40px;
   background-color: #1f1f1f;
@@ -345,6 +345,8 @@
 
 .footer__social-icons {
   margin-right: 10px;
+  width: 16px;
+  height: 16px;
 }
 
 .footer__column-link {
