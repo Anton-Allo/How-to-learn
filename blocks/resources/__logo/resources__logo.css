@@ -6,3 +6,8 @@
   vertical-align: middle;
   text-align: center;
 }
+
+.resources__logo:hover {
+  opacity: 0.3;
+  transition: 2s;
+}
